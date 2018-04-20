@@ -35,7 +35,7 @@ const banner = `/**
  */
 `;
 
-gulp.task('styles', () => {
+gulp.task('styles', (done) => {
 	ratios.forEach((ratio) => {
 		return gulp.src('styles/screen.scss')
 			.pipe(replace('[RATIO]', ratio))
@@ -56,6 +56,7 @@ gulp.task('styles', () => {
 				path.basename += `-${ ratio.replace('/', 'x') }`;
 			}))
 			.pipe(gulp.dest('styles'))
-			.pipe(sync.stream());
-	});
+            .pipe(sync.stream());
+    });
+    done();
 });
