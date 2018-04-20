@@ -1,0 +1,50 @@
+
+
+// ------------------------------------------------------------------
+// Basic
+// ------------------------------------------------------------------
+
+h2 {
+    position: relative;
+
+    margin-bottom: 34px;
+
+    color: $grey;
+
+    font: bold 50px/1 PT Sans Narrow, sans-serif;
+
+    &:not(.no-bg) {
+        display: inline-block;
+
+        margin-left: -200px;
+        padding: 7px 10px 10px 200px;
+
+        color: white;
+        background: $blue-primary;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -66px;
+
+            display: block;
+
+            width: 67px;
+            height: 100%;
+
+            content: '';
+            transform: scaleX(-1);
+
+            background: url('../images/ornament-dark.svg') no-repeat, linear-gradient(to bottom left, $blue-primary 0, $blue-primary 50%, transparent 50%);
+            background-size: contain;
+        }
+    }
+}
+
+p {
+    margin-bottom: 1em;
+
+    &.note {
+        color: lighten($grey, 25%);
+    }
+}
