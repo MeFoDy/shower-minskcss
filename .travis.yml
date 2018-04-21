@@ -7,7 +7,7 @@ cache:
 install:
   - npm install
 script:
-  - npm run styles
+  - npm run build-prod
 deploy:
   edge:
     branch: v1.8.47
@@ -15,6 +15,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: false
+  local-dir: dist
   target-branch: gh-pages
   on:
     branch: master
