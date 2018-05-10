@@ -29,6 +29,6 @@ gulp.task('serve', gulp.series('build', () => {
             `${dist}/**/*.html`,
         ],
     });
-    gulp.watch(config.paths.styles.src.scss, gulp.series('build:scss'));
+    gulp.watch(config.paths.styles.watch, gulp.series('build:scss'));
     gulp.watch(`${config.base.src}/index.html`, gulp.series('build:html'));
 }));

@@ -28,6 +28,7 @@ const paths = {
     },
     styles: {
         src: `${ base.src }/styles/screen.scss`,
+        watch: `${ base.src }/styles/**/*.scss`,
         dist: `${ base.dist }/styles`,
     },
 };
